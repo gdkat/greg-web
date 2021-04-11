@@ -1,0 +1,37 @@
+.projects-root {
+  max-width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  color: white;
+}
+
+.projects-root * {
+  z-index: 2;
+}
+
+.projects-background-svg {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 150%;
+  opacity: 0.5;
+}
+
+.loading-wrapper {
+  position: relative;
+}
+
+.loading-wrapper .loading-icon {
+  color: black;
+  font-size: larger;
+}
+
+.loading-wrapper .loading-progress {
+  color: black;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  z-index: 1;
+}
