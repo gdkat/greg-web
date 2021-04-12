@@ -1,0 +1,10 @@
+.accordion-root {
+  margin-bottom: 10px;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.MuiAccordion-root.Mui-expanded {
+  background-color: #f5f5ff;
+  margin: unset;
+  padding-bottom: 20px;
+}

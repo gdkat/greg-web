@@ -12,7 +12,7 @@ const Profile = () => {
       <Particles />
       <div className="content-area responsive-width profile-intro">
         <div className="profile-text">
-          <h1 className="name">Gregory Katz - </h1>
+          <h1 className="name">Gregory Katz</h1>
           <h1>Software Developer</h1>
           <h1>From Greater NYC</h1>
           <div className="profile-social-media">
@@ -28,13 +28,7 @@ const Profile = () => {
             />
           </div>
         </div>
-        <img
-          className="profile-pic"
-          src={Greg}
-          alt="Greg"
-          height={400}
-          width={400}
-        />
+        <img className="profile-pic" src={Greg} alt="Greg" />
       </div>
     </div>
   );

@@ -1,0 +1,9 @@
+.skills-root {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px;
+}
+
+.skills-accordion-container {
+  margin: 24px 0;
+}

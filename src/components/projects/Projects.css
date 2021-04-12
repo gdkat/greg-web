@@ -37,8 +37,8 @@
 
 .projects-background-svg {
   position: sticky;
-  margin-top: 5%;
-  top: 25%;
+  margin-top: 100px;
+  top: 20%;
   z-index: 1;
   height: 50%;
   opacity: 1;
