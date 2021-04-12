@@ -1,14 +1,21 @@
 .projects-root {
+  position: relative;
   max-width: 1080px;
-  margin: auto;
+  height: unset;
+  margin: 0 auto;
+  padding: 4vh 0;
+  z-index: 2;
+}
+
+.projects-root-header {
+  margin-bottom: 24px;
+}
+
+.projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
   color: white;
-}
-
-.projects-root * {
-  z-index: 2;
 }
 
 .projects-background-svg {

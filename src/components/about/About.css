@@ -1,0 +1,15 @@
+.about-summary-root {
+  height: 100%;
+}
+
+.about-summary {
+  height: 300px;
+  max-width: 1000px;
+  background-color: white;
+  margin: auto;
+}
+
+.about-city-bg {
+  height: 75vh;
+  background-image: url("../../assets/city.png");
+}

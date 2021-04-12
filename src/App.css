@@ -13,18 +13,13 @@ html,
 }
 
 .content-area {
-  height: 85%;
+  height: 80%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .parallax {
-  position: absolute;
-
-  height: 100%;
-  width: 100%;
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

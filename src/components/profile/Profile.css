@@ -1,3 +1,7 @@
+.profile-root {
+  background-color: white;
+}
+
 .profile-intro {
   flex-wrap: wrap-reverse;
 }

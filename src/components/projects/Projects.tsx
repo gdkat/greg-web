@@ -38,9 +38,10 @@ const Projects = () => {
   }, [repos]);
 
   return (
-    <div className="section-root">
+    <div>
       <img className="projects-background-svg" src={BGSVG} alt="bg" />
-      <div className="content-area projects-root">
+      <div className="projects-root">
+        <h1 className="projects-root-header">Projects</h1>
         {repos.loading ? (
           <div className="loading-wrapper">
             <Fab aria-label="save" color="inherit" className="loading-icon">
@@ -51,11 +52,11 @@ const Projects = () => {
         ) : repos.error ? (
           <div className="error-wrapper"></div>
         ) : (
-          repos.data
-            ?.slice(0, 5)
-            .map((repo, idx) => (
+          <div className="projects-grid">
+            {repos.data?.slice(0, 5).map((repo, idx) => (
               <Project key={repo.id} repo={repo} color={colors[idx]} />
-            ))
+            ))}
+          </div>
         )}
       </div>
     </div>

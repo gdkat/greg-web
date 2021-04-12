@@ -2,15 +2,13 @@ import "./Profile.css";
 import Greg from "../../assets/greg.jpg";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import CityBG from "../../assets/city.png";
 import Particles from "../particles/Particles";
 
 const Profile = () => {
   const socialIconClick = (path: string) => window.open(path, "_blank");
 
   return (
-    <div className="section-root">
-      {/* <img className="profile-bg" src={CityBG} alt="city" /> */}
+    <div className="section-root profile-root">
       <Particles />
       <div className="content-area profile-intro">
         <div className="profile-text">
