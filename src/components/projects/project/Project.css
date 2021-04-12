@@ -19,6 +19,14 @@
   flex: 1;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
 .project-languages {
   text-align: end;
   margin: unset;
@@ -28,4 +36,10 @@ h2.project-title {
   margin: unset;
   font-size: 32px;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 959px) {
+  .project-root:nth-child(n) {
+    grid-column: 1 / 4;
+  }
 }

@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <div className="section-root profile-root">
       <Particles />
-      <div className="content-area profile-intro">
+      <div className="content-area responsive-width profile-intro">
         <div className="profile-text">
           <h1 className="name">Gregory Katz - </h1>
           <h1>Software Developer</h1>

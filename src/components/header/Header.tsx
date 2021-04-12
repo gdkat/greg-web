@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h2 className="header-title">Gregory Katz</h2>
+      {/* <h2 className="header-title">Gregory Katz</h2> */}
       <div className="header-elements">
         {/* {menuItems.map((el) => <a onClick={(e) => onClick(e, el.link)}>{el.title}</a>)} */}
       </div>

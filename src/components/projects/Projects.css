@@ -1,14 +1,25 @@
+.projects-container {
+  position: relative;
+}
+
 .projects-root {
   position: relative;
-  max-width: 1080px;
+  max-width: 1000px;
   height: unset;
   margin: 0 auto;
-  padding: 4vh 0;
   z-index: 2;
 }
 
 .projects-root-header {
   margin-bottom: 24px;
+}
+
+.projects-svg {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  height: 150px;
+  margin-top: 25px;
 }
 
 .projects-grid {
@@ -18,12 +29,19 @@
   color: white;
 }
 
-.projects-background-svg {
+.background-svg-container {
   position: absolute;
-  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.projects-background-svg {
+  position: sticky;
+  margin-top: 5%;
+  top: 25%;
   z-index: 1;
-  height: 150%;
-  opacity: 0.5;
+  height: 50%;
+  opacity: 1;
 }
 
 .loading-wrapper {
@@ -41,4 +59,11 @@
   top: -6px;
   left: -6px;
   z-index: 1;
+}
+
+@media screen and (max-width: 959px) {
+  .projects-background-svg {
+    width: 100%;
+    margin-top: 0;
+  }
 }

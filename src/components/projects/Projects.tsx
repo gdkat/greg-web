@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 import "./Projects.css";
 import Project from "./project/Project";
 import colors from "../../constants/colors";
-import BGSVG from "../../assets/cool-background.svg";
+import AstronautSVG from "../../assets/undraw_Astronaut_re_8c33.svg";
+import LaunchSVG from "../../assets/undraw_launching_125y.svg";
+import ViewMore from "./viewmore/ViewMore";
 
 const Projects = () => {
   const [repos, setRepos] = useState({
@@ -38,10 +40,13 @@ const Projects = () => {
   }, [repos]);
 
   return (
-    <div>
-      <img className="projects-background-svg" src={BGSVG} alt="bg" />
-      <div className="projects-root">
-        <h1 className="projects-root-header">Projects</h1>
+    <div className="projects-container">
+      <div className="background-svg-container">
+        <img className="projects-background-svg" src={LaunchSVG} alt="bg" />
+      </div>
+      <div className="responsive-width projects-root">
+        <img className="projects-svg" src={AstronautSVG} alt="bg" />
+        <h2 className="projects-root-header">Projects</h2>
         {repos.loading ? (
           <div className="loading-wrapper">
             <Fab aria-label="save" color="inherit" className="loading-icon">
@@ -56,6 +61,7 @@ const Projects = () => {
             {repos.data?.slice(0, 5).map((repo, idx) => (
               <Project key={repo.id} repo={repo} color={colors[idx]} />
             ))}
+            <ViewMore color={colors[5]} />
           </div>
         )}
       </div>

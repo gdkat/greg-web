@@ -27,11 +27,6 @@
   cursor: pointer;
 }
 
-h1 {
-  font-size: 64px;
-  margin: unset;
-}
-
 .name {
   color: var(--primary-color);
 }

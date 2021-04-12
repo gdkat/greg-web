@@ -55,7 +55,12 @@ const Project = (props: ProjectProps) => {
 
   return (
     <div className="project-root" style={{ backgroundColor: color }}>
-      <h2 className="project-title">{repo.name}</h2>
+      <h3
+        className="project-title clickable"
+        onClick={() => window.open(repo.html_url, "_blank")}
+      >
+        {repo.name}
+      </h3>
       <p className="project-description">{repo.description}</p>
       <p className="project-languages">
         {languages.data ? parseLanguages(languages.data) : repo.language}
