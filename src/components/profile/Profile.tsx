@@ -11,10 +11,12 @@ const Profile = () => {
     <div className="section-root profile-root">
       <Particles />
       <div className="content-area responsive-width profile-intro">
-        <div className="profile-text">
-          <h1 className="name">Gregory Katz</h1>
-          <h1>Software Developer</h1>
-          <h1>From Greater NYC</h1>
+        <div className="profile-text typewriter">
+          <h1 id="profile-title-1" className="name">
+            Gregory Katz
+          </h1>
+          <h1 id="profile-title-2">Software Developer</h1>
+          <h1 id="profile-title-3">From Greater NYC</h1>
           <div className="profile-social-media">
             <GitHubIcon
               fontSize="inherit"

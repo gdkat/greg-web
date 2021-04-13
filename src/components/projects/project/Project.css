@@ -4,6 +4,7 @@
   height: 300px;
   padding: 24px;
   border-radius: 16px;
+  transition: 750ms ease-in-out;
 }
 
 .project-root:nth-child(1),

@@ -6,10 +6,8 @@
 }
 
 #header-elements {
-  position: sticky;
-  top: 0;
   width: 100%;
-  height: 5vh;
+  height: 30px;
   transition: 100ms;
   display: flex;
   justify-content: space-evenly;

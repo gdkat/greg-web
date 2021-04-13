@@ -1,4 +1,4 @@
-import { GitHub, Check } from "@material-ui/icons";
+import { GitHub } from "@material-ui/icons";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Fab from "@material-ui/core/Fab";
 import { useEffect, useState } from "react";
@@ -59,9 +59,14 @@ const Projects = () => {
         ) : (
           <div className="projects-grid">
             {repos.data?.slice(0, 5).map((repo, idx) => (
-              <Project key={repo.id} repo={repo} color={colors[idx]} />
+              <Project
+                key={repo.id}
+                index={idx}
+                repo={repo}
+                color={colors[idx]}
+              />
             ))}
-            <ViewMore color={colors[5]} />
+            <ViewMore index={5} color={colors[5]} />
           </div>
         )}
       </div>
