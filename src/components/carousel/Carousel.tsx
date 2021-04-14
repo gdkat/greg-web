@@ -122,7 +122,8 @@ const Carousel: FunctionComponent<CarouselProps> = ({
           justifyContent: "center",
           padding: "10px 0",
           position: "absolute",
-          bottom: 0,
+          bottom: 8,
+          right: 24,
         }}
       >
         {renderDots()}
