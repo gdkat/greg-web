@@ -8,6 +8,7 @@ import Header from "../header/Header";
 const Body = () => {
   return (
     <div className="body">
+      <div className="parallax" />
       <Profile />
       {/* <Header /> */}
       <About />

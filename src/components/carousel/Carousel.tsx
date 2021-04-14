@@ -12,11 +12,13 @@ import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 interface CarouselProps {
   className?: string;
   onChange?: (activeIndex: number) => void;
+  auto?: boolean;
 }
 
 const Carousel: FunctionComponent<CarouselProps> = ({
   className,
   onChange,
+  auto,
   children,
 }) => {
   const [slide, setSlide] = useState(0);
@@ -57,6 +59,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({
   };
 
   useEffect(() => {
+    if (!auto) return;
     timeoutCancel.current = setTimeout(() => {
       next();
     }, 10000);
@@ -76,8 +79,9 @@ const Carousel: FunctionComponent<CarouselProps> = ({
             margin: "0 3px",
           }}
           onClick={() => {
-            timeoutCancel.current && clearTimeout(timeoutCancel.current);
             setSlide(i);
+            if (!auto) return;
+            timeoutCancel.current && clearTimeout(timeoutCancel.current);
             if (i === slide) {
               timeoutCancel.current = setTimeout(() => {
                 next();
@@ -113,7 +117,13 @@ const Carousel: FunctionComponent<CarouselProps> = ({
         </Transition>
       </SwitchTransition>
       <div
-        style={{ display: "flex", justifyContent: "center", padding: "10px 0" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "10px 0",
+          position: "absolute",
+          bottom: 0,
+        }}
       >
         {renderDots()}
       </div>

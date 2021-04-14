@@ -40,7 +40,7 @@ const Projects = () => {
   }, [repos]);
 
   return (
-    <div className="projects-container">
+    <div className="bg-white projects-container">
       <div className="background-svg-container">
         <img className="projects-background-svg" src={LaunchSVG} alt="bg" />
       </div>

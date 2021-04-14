@@ -7,8 +7,8 @@ import Carousel from "../carousel/Carousel";
 
 const About = () => {
   return (
-    <div className="parallax about-city-bg">
-      <Carousel className="about-summary-card responsive-width">
+    <div className="about-container">
+      <Carousel className="about-summary-card responsive-width" auto>
         <div className="about-summary-root">
           <div className="about-summary-text">
             <h2>Analytical</h2>
@@ -40,10 +40,10 @@ const About = () => {
           <div className="about-summary-text">
             <h2>Committed</h2>
             <p>
-              Computer Science and Software Development are constantly evolving.
-              I am committed to learning the newest paradigms and frameworks in
-              new languages and open source technologies to ensure I am always
-              implementing the best solution in a project.
+              Computer Science and software are constantly evolving. I am
+              committed to learning the latest languages, paradigms, and open
+              source technologies to ensure I am always implementing the best
+              solution in a project.
             </p>
           </div>
           <div className="about-summary-images">

@@ -46,16 +46,18 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="skills-root">
-      <h2>Skills</h2>
-      <div className="skills-accordion-container">
-        {skills.map((skill) => (
-          <Accordion
-            key={skill.title}
-            title={skill.title}
-            body={skill.tech.join(", ")}
-          />
-        ))}
+    <div className="bg-white">
+      <div className="skills-root">
+        <h2>Skills</h2>
+        <div className="skills-accordion-container">
+          {skills.map((skill) => (
+            <Accordion
+              key={skill.title}
+              title={skill.title}
+              body={skill.tech.join(", ")}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
