@@ -1,15 +1,22 @@
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState, Fragment, useRef } from "react";
 import RepoRes from "../../../mock/GithubRepos";
 import "./Project.css";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 interface ProjectProps {
   repo: typeof RepoRes[0];
   color: string;
+  onTitleClick: (
+    ref: React.RefObject<HTMLDivElement> | null,
+    id: number
+  ) => void;
   index?: number;
 }
 
 const Project = (props: ProjectProps) => {
-  const { repo, color, index } = props;
+  const { repo, color, onTitleClick, index } = props;
+
+  const projectRef = useRef<HTMLDivElement>(null);
 
   const [languages, setLanguages] = useState({
     data: null as {
@@ -54,19 +61,6 @@ const Project = (props: ProjectProps) => {
     ));
   };
 
-  const onHover = (e: any) => {
-    if (index == null) return;
-    const odd = (index + 1) % 2;
-    const hoverEl = document.getElementById(`project-${index}`);
-    let neighborEl = odd
-      ? document.getElementById(`project-${index + 1}`)
-      : document.getElementById(`project-${index - 1}`);
-    if (!hoverEl || !neighborEl) return;
-
-    hoverEl.style.gridColumn = odd ? "1 / 3" : "2 / 4";
-    neighborEl.style.gridColumn = odd ? "3 / 4" : "1 / 2";
-  };
-
   return (
     <div
       id={index != null ? `project-${index}` : undefined}
@@ -76,9 +70,11 @@ const Project = (props: ProjectProps) => {
     >
       <h3
         className="project-title clickable"
-        onClick={() => window.open(repo.html_url, "_blank")}
+        ref={projectRef}
+        onMouseOver={() => onTitleClick(projectRef, repo.id)}
+        onMouseLeave={() => onTitleClick(null, repo.id)}
       >
-        {repo.name}
+        {repo.name} <KeyboardArrowDownIcon fontSize="inherit" />
       </h3>
       <p className="project-description">{repo.description}</p>
       <p className="project-languages">

@@ -16,8 +16,12 @@
   grid-column: 2 / 4;
 }
 
-.project-description {
-  flex: 1;
+h3.project-title {
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .clickable {
@@ -28,15 +32,13 @@
   text-decoration: underline;
 }
 
+.project-description {
+  flex: 1;
+}
+
 .project-languages {
   text-align: end;
   margin: unset;
-}
-
-h2.project-title {
-  margin: unset;
-  font-size: 32px;
-  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 959px) {
